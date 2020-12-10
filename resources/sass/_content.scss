@@ -1,0 +1,103 @@
+.layout-content {
+    margin-bottom: 1rem;
+}
+
+.layout-footer {
+    padding: 15px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.layout-loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(226, 226, 226, 0.5);
+    z-index: 2000;
+    .loading-text {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        p {
+            margin-bottom: 5px;
+        }
+        .fas {
+            font-size: 20px;
+        }
+    }
+}
+
+.layout-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .5;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.page-title {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding-bottom: 1rem;
+    @include clearfix();
+    h1 {
+        float: left;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    .buttons {
+        float: right;
+    }
+}
+
+.page-form {
+    .inputmask {
+        text-align: right;
+    }
+    .table {
+        td,
+        th {
+            &.title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.page-buttons {
+    .btn {
+        margin: 0 0.5rem;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media print {
+    .layout-header {
+        display: none;
+    }
+    .layout-content {
+        .page-breadcrumbs {
+            display: none;
+        }
+        .page-buttons {
+            display: none;
+        }
+    }
+    .layout-footer {
+        display: none;
+    }
+}
