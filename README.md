@@ -12,3 +12,5 @@ run "composer update"
 run "npm update"
 
 run "npm run dev"
+
+run "php artisan migrate"
