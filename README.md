@@ -1,6 +1,7 @@
 # weather
 
 Create a database "weather" as file .env
+
 Pre-requisites
 - install composer
 - install npm
